@@ -58,10 +58,17 @@ This guide explains how to deploy the Restaurant Reservation Management System t
 ### Seed the Database
 
 After backend deployment:
-1. Go to your Render service dashboard
-2. Click "Shell" tab
-3. Run: `npm run seed`
+1. Wait for the backend to be fully deployed and running
+2. Make a POST request to the seed endpoint:
+   ```
+   POST https://your-backend-url.onrender.com/api/seed
+   ```
+3. You can use curl, Postman, or any HTTP client:
+   ```bash
+   curl -X POST https://restaurant-reservation-api.onrender.com/api/seed
+   ```
 4. This will create tables and admin user
+5. You should see response: `{"success":true,"message":"Database seeded successfully"}`
 
 ## Step 3: Deploy Frontend to Vercel
 

@@ -13,7 +13,7 @@ const tables = [
   { tableNumber: 7, capacity: 8 },
 ];
 
-const seed = async () => {
+const seed = async (shouldExit = true) => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected for seeding');
@@ -42,11 +42,17 @@ const seed = async () => {
     }
 
     console.log('Seeding complete');
-    process.exit(0);
+    if (shouldExit) process.exit(0);
   } catch (error) {
     console.error('Seed failed:', error.message);
-    process.exit(1);
+    if (shouldExit) process.exit(1);
+    throw error;
   }
 };
 
-seed();
+// Run seed if called directly
+if (require.main === module) {
+  seed();
+}
+
+module.exports = seed;
