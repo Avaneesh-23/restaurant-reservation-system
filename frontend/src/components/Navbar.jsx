@@ -14,10 +14,10 @@ export default function Navbar() {
     <header className={`navbar ${isAdmin ? 'navbar-admin' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="brand">
-          {isAdmin ? 'Admin Panel' : 'Bistro Reserve'}
+          TableBook
         </Link>
 
-        {user && (
+        {user ? (
           <nav className="nav-links">
             {isAdmin ? (
               <>
@@ -34,6 +34,15 @@ export default function Navbar() {
             <button type="button" className="btn btn-ghost" onClick={handleLogout}>
               Logout
             </button>
+          </nav>
+        ) : (
+          <nav className="nav-links">
+            <Link to="/login" className="btn btn-ghost">
+              Login
+            </Link>
+            <Link to="/register" className="btn btn-primary">
+              Sign up
+            </Link>
           </nav>
         )}
       </div>
