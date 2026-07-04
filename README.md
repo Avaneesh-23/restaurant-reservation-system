@@ -4,7 +4,7 @@ A full-stack restaurant reservation application with customer booking flows and 
 
 ## Live Demo
 
-- **Frontend:** https://restaurant-reservation-system-cckjtjqye.vercel.app
+- **Frontend:** https://restaurant-reservation-system-g953ziybv.vercel.app
 - **Backend API:** https://restaurant-reservation-api-hsy1.onrender.com
 
 ## Tech Stack
