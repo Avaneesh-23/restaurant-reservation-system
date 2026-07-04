@@ -39,11 +39,11 @@ export default function HomePage() {
         <div className="landing-right">
           <div className="restaurant-card">
             <div className="restaurant-card-header">
-              <h2 className="restaurant-name">Chez Émergent</h2>
+              <h2 className="restaurant-name">Your Restaurant</h2>
             </div>
             <div className="restaurant-card-body">
-              <p className="restaurant-details">10 tables - seats up to 40 guests</p>
-              <p className="restaurant-hours">OPEN 12:00-22:00</p>
+              <p className="restaurant-details">Multiple table sizes available</p>
+              <p className="restaurant-hours">Easy online booking</p>
             </div>
           </div>
         </div>
