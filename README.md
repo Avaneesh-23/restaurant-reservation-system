@@ -4,8 +4,8 @@ A full-stack restaurant reservation application with customer booking flows and 
 
 ## Live Demo
 
-- **Frontend:** _Deploy and add your URL here_
-- **Backend API:** _Deploy and add your URL here_
+- **Frontend:** https://restaurant-reservation-system-cckjtjqye.vercel.app
+- **Backend API:** https://restaurant-reservation-api-hsy1.onrender.com
 
 ## Tech Stack
 
@@ -172,16 +172,16 @@ Frontend routes are also role-aware:
 
 ## Deployment
 
-### Backend (Render / Railway example)
+### Backend (Render)
 
 1. Create a MongoDB Atlas cluster and copy the connection string.
-2. Deploy the `backend` folder as a Node web service.
+2. Deploy the `backend` folder as a Node web service via Render dashboard.
 3. Set environment variables:
-   - `MONGODB_URI`
-   - `JWT_SECRET`
-   - `CLIENT_URL` (your frontend URL)
-   - `PORT` (usually auto-set by platform)
-4. Run seed once: `npm run seed`
+   - `MONGODB_URI` - MongoDB Atlas connection string
+   - `JWT_SECRET` - Random secret key for JWT tokens
+   - `CLIENT_URL` - Frontend URL for CORS
+   - `PORT` - Render uses port 10000 by default
+4. Seed database via POST request to `/api/seed` endpoint after deployment
 
 ### Frontend (Vercel / Netlify example)
 
